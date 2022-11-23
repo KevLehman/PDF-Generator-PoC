@@ -156,9 +156,16 @@ function createMessages(doc: PDFKit.PDFDocument) {
 
 const cpuUsage = process.cpuUsage();
 
-// create 10 pdfs
-for (let i = 0; i < 100; i++) {
-    createPDF();
+function create100PDFs() {
+  const promises = [];
+  // Change this if you want more PDFs :)
+  for (let i = 0; i < 1; i++) {
+    promises.push(createPDF());
+  }
+
+  return Promise.all(promises);
 }
 
-measurePerformance(cpuUsage);
+create100PDFs().then(() => {
+  measurePerformance(cpuUsage);
+});

@@ -10,11 +10,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@react-pdf/renderer": "^3.0.1",
     "@types/node": "^18.11.9",
     "@types/pdfkit": "^0.12.8",
+    "@types/react": "^18.0.25",
     "typescript": "^4.9.3"
   },
   "dependencies": {
-    "pdfkit": "^0.13.0"
+    "pdfkit": "^0.13.0",
+    "react": "^16.8.6"
   }
 }
